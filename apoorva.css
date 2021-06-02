@@ -74,11 +74,11 @@
 
 .home{
     display:flex;
-    background:url("apoorva.png") no-repeat center;
+    background:url("Apoorvajain_1.jpg") no-repeat center;
     height :100vh;
     background-size: cover;
     background-attachment: fixed;
-    /* color:#fff; */
+    color:#fff; 
     min-height: 500px;
     font-family :'Ubuntu',sans-serif;
 }
