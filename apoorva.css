@@ -68,7 +68,7 @@
     color:white;
     font-size:23px;
     cursor:pointer;
-    display:none;  
+    display:none;
 }
 /* home-section styling */
 
@@ -78,7 +78,7 @@
     height :100vh;
     background-size: cover;
     background-attachment: fixed;
-    color:#fff; 
+    color:#fff;
     min-height: 500px;
     font-family :'Ubuntu',sans-serif;
 }
@@ -129,7 +129,6 @@
 .contact .contact-content{
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: space-between;
 }
 
@@ -171,12 +170,13 @@ section .title::after{
 
 
 /* about section styling */
-
+.edu .title::after,
 .about .title::after{
     content: "Who I Am";
 }
 
 .about .about-content .left{
+
     width:45%
 }
 
@@ -190,6 +190,7 @@ section .title::after{
 .about .about-content .right{
     width:55%
 }
+
 .about .about-content .right .text{
     font-size:25px;
     font-weight: 600;
@@ -223,23 +224,93 @@ section .title::after{
 }
 
 /* education section styling */
+.edu .edu-content1{
+  max-width: 1080px;
+ margin: 50px auto;
+ padding: 0 20px;
+ position: relative;
+}
+.edu .edu-content1 .center-line{
+  position: absolute;
+  height: 100%;
+  width: 4px;
+  background: crimson;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+}
+.edu .edu-content1 .row{
+  display: flex;
+}
+.edu .edu-content1 .row-1{
+  justify-content: flex-start;
+}
+.edu .edu-content1 .row-2{
+  justify-content: flex-end;
+}
+.edu .edu-content1 .row section{
+  background: crimson;
+  color:white;
+  border-radius: 5px;
+  width: calc(50% - 40px);
+  padding: 20px;
+  position: relative;
+}
 
-.edu ,.proj, .train{
+.edu .row section .icon,
+.edu .center-line .scroll-icon{
+  position: absolute;
+  background: #f2f2f2;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ff7979;
+  font-size: 17px;
+  box-shadow: 0 0 0 4px #fff, inset 0 2px 0 rgba(0,0,0,0.08), 0 3px 0 4px rgba(0,0,0,0.05);
+}
+.edu .center-line .scroll-icon{
+  bottom: 0px;
+  left: 50%;
+  font-size: 25px;
+  transform: translateX(-50%);
+}
+.edu .row-1 section .icon{
+  top: 15px;
+  right: -60px;
+}
+.edu .row-2 section .icon{
+  top: 15px;
+  left: -60px;
+}
+.edu .row section .details{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.edu .row section .details .edutitle{
+  font-size: 22px;
+  font-weight: 600;
+  color: black;
+}
+.edu .row section p{
+  margin: 10px 0 17px 0;
+}
+
+.proj, .train{
     color:#fff;
     background: #111;
 }
-.edu .title::before,
 .proj .title::before,
 .train .title::before{
     background: #fff;
 }
-.edu .title::after,
 .proj .title::after,
 .train .title::after{
     background: #111;
     content: "My Journey";
 }
-.edu .edu-content .card,
 .proj .proj-content .card,
 .train .train-content .card{
     width: calc(33% - 20px);
@@ -250,41 +321,38 @@ section .title::after{
     cursor: pointer;
     transition: all 0.3s ease;
 }
-.edu .edu-content .card:hover,
 .proj .proj-content .card:hover,
 .train .train-content .card:hover{
     background: crimson;
 }
-.edu .edu-content .card .box,
 .proj .proj-content .card .box,
 .train .train-content .card .box{
     transition: all 0.3s ease;
 }
-.edu .edu-content .card:hover .box,
 .proj .proj-content .card:hover .box,
 .train .train-content .card:hover .box{
     transform: scale(1.05);
 }
-.edu .edu-content .card i,
 .proj .proj-content .card i,
 .train .train-content .card i{
     font-size: 50px;
     color: crimson;
     transition: color 0.3s ease;
 }
-.edu .edu-content .card:hover i,
 .proj .proj-content .card:hover i,
 .train .train-content .card:hover i{
     color: #fff;
 }
-.edu .edu-content .card .text ,
 .proj .proj-content .card .text,
 .train .train-content .card .text{
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 500;
     margin: 10px 0 7px 0;
 }
-
+.proj .proj-content .card .text,
+.train .train-content .card .text{
+  color: crimson;
+}
 
 /* skills section styling */
 
@@ -390,8 +458,53 @@ section .title::after{
 .contact .contact-content .info .sub-title{
     color: #333;
 }
+.contact .right .inputstyle{
+  height: 2rem;
+  border-radius: 25px;
+  padding: 0 30px;
+  display: block;
+  width: 60%;
+  background: #e6e6e6;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #666;
+  outline: none;
+  border: none;
+  overflow: visible;
+}
 
-    
+.contact .right .form-button{
+    height: 50px;
+    width: 25%;
+    font-size: 20px;
+    line-height: 1.5;
+    background: crimson;
+    color:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px;
+    border-radius: 25px;
+    border :2px solid crimson;
+    transition:all 0.3s ease;
+    overflow: visible;
+}
+.contact .right .form-button:hover{
+  color:crimson;
+  background:none;
+}
+.contact .handles{
+  margin-top: 5rem;
+}
+.contact .handles a{
+  font-size: 15px;
+  background-color: black;
+  border-radius: 50%;
+  color:white;
+  padding: 15px 15px;
+  margin-right: 1rem;
+}
+
    /* Scroll- up */
 .scroll-up-btn{
     position: fixed;
@@ -488,12 +601,17 @@ section .title::after{
     .about .about-content .right{
         flex: 100%;
     }
-    .edu .edu-content .card, .proj .proj-content .card, .train .train-content .card{
+     .proj .proj-content .card, .train .train-content .card{
         width: calc(50% - 10px);
         margin-bottom: 20px;
     }
-    
+    .contact .contact-content .column{
+        width: 100%;
+    }
+
 }
+
+
 
 @media (max-width: 690px) {
     .max-width{
@@ -508,7 +626,25 @@ section .title::after{
     .home .home-content a{
         font-size: 20px;
     }
-    .edu .edu-content .card, .proj .proj-content .card, .train .train-content .card{
+    .edu .edu-content1 .center-line{
+      left: 40px;
+    }
+    .edu .edu-content1 .row{
+      margin: 30px 0 3px 60px;
+    }
+    .edu .edu-content1 .row section{
+      width: 100%;
+    }
+    .edu .row-1 section::before{
+      left: -7px;
+    }
+    .edu .row-1 section .icon{
+      left: -60px;
+    }
+    .proj .proj-content .card, .train .train-content .card{
+        width: 100%;
+    }
+    .contact .contact-content .column{
         width: 100%;
     }
 }
@@ -520,4 +656,16 @@ section .title::after{
     .home .home-content .text-3{
         font-size: 27px;
     }
+    .contact .contact-content .column{
+        width: 100%;
+    }
+    .edu .edu-content1 .center-line,
+    .edu .row section::before,
+    .edu .row section .icon{
+        display: none;
+    }
+    .edu .edu-content1 .row{
+        margin: 10px 0;
+    }
+
 }
